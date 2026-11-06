@@ -2,7 +2,7 @@
 
 | Nome | RA |
 |---|---|
-| Bruno (completar nome completo) | |
+| Bruno Kioshi Sakaguchi | 40095529 |
 | Gabriel Luan Cavalin | |
 | Heitor Massaroth de Farias | |
 | Priscila Bueno de Souza | |
