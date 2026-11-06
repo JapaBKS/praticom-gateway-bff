@@ -2,6 +2,7 @@
 # Configure no GitHub: Settings > Secrets and variables > Actions
 #   secret   AZURE_WEBAPP_PUBLISH_PROFILE  (Web App > Visão geral > Baixar perfil de publicação)
 #   variable AZURE_WEBAPP_NAME             (nome do Web App, ex.: praticom-gateway)
+# Sem o secret do perfil de publicação, o workflow só roda os testes.
 name: Deploy Gateway/BFF (Azure Web App)
 
 on:
@@ -12,16 +13,19 @@ on:
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
+    env:
+      HAS_PROFILE: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE != '' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
       - run: npm ci
       - run: npm test
       - run: npm prune --omit=dev
       - uses: azure/webapps-deploy@v3
+        if: env.HAS_PROFILE == 'true'
         with:
           app-name: ${{ vars.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
