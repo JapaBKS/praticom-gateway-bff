@@ -7,7 +7,7 @@ Ponto **único de entrada** do Praticom. Ele roteia as chamadas do frontend para
 | 🔀 **Gateway publicado (Azure Web App)** | https://praticom-gateway-dd687f.azurewebsites.net |
 | 📘 Swagger | https://praticom-gateway-dd687f.azurewebsites.net/docs |
 | 🌐 Site (Azure Storage, site estático) | https://praticomfrontdd687f.z1.web.core.windows.net |
-| 🎥 Vídeo de apresentação (YouTube, não listado) | https://youtu.be/SEU-VIDEO |
+| 🎥 Vídeo de apresentação (YouTube, não listado) | https://youtu.be/1TIt9TzYJps |
 | 📦 Repositório do frontend | https://github.com/JapaBKS/praticom-frontend |
 | 📦 Repositório dos microsserviços | https://github.com/JapaBKS/praticom-backend |
 
