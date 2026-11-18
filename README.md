@@ -25,7 +25,7 @@ Ponto **único de entrada** do Praticom. Ele roteia as chamadas do frontend para
 | CORS | Lista de origens em `CORS_ORIGINS` (endereço do site estático) |
 | Centralização da entrada | O frontend não conhece o endereço dos microsserviços |
 | Observabilidade | `X-Correlation-Id`, `X-Gateway-Processed-By`, `X-Gateway-Execution-Time-Ms`, `GET /api/bff/status` |
-| Swagger | `/docs` |
+| Swagger | [`/docs`](https://praticom-gateway-dd687f.azurewebsites.net/docs) |
 
 ## Estrutura (hexagonal)
 
@@ -48,7 +48,7 @@ cp .env.example .env    # para uso local: MARKET_SERVICE_URL=http://localhost:50
 npm run dev
 ```
 
-O Swagger fica em http://localhost:5000/docs.
+Rodando localmente, o Swagger fica em `http://localhost:5000/docs`. O publicado no Azure está em https://praticom-gateway-dd687f.azurewebsites.net/docs.
 
 ## Testes
 
